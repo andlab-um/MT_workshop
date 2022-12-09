@@ -19,10 +19,12 @@ Some code from Haiyan
 contact: haiyanwu3@gmail.com
 
 ## Part 3: MT with EEG
-contact: xxx@gmail.com
+
 Some code from Kun for [[OpenNeuro] Mouse-Tracking EGI dataset](https://openneuro.org/datasets/ds003766) preprocessing and preliminary analysis (see [code here](https://github.com/andlab-um/MT-EEG-dataset)), accompanying with the following paper:
 
 > Chen, K., Wang, R., Huang, J., Gao, F., Yuan, Z., Qi, Y., & Wu, H. (2022). **A resource for assessing dynamic binary choices in the adult brain using EEG and mouse-tracking**. *Scientific Data*, 9(1), 416. [https://doi.org/10.1038/s41597-022-01538-5](https://doi.org/10.1038/s41597-022-01538-5)
+
+Contact: [Kun CHEN](https://github.com/const7) (yc17307@um.edu.mo)
 
 ## Part 4: MT with fMRI
 contact: xinyi's email and descriptions here
