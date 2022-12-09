@@ -23,7 +23,9 @@ Xu, X. J., Liu, X., Hu, X., & Wu, H. (2021). MT-aIAT: Integrating mouse tracking
 ## Part 2: MT with opensesame
 Some code from Haiyan 
 contact: haiyanwu3@gmail.com
+
 OpenSesame
+
 OpenSesame is a program to create experiments for psychology, neuroscience, and experimental economics. The latest stable version is 3.3.14 Lentiform Loewenfeld, released on Dec 7, 2022
 [https://osdoc.cogsci.nl/]
 
