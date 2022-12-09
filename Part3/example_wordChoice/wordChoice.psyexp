@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -128,8 +128,8 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
       <CodeComponent name="egi_init">
-        <Param name="Before Experiment" updates="constant" val="# set to True before start egi exp&amp;#10;netstation = True&amp;#10;recording = True" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="netstation = true;&amp;#10;recording = true;&amp;#10;" valType="extendedCode"/>
+        <Param name="Before Experiment" updates="constant" val="# set to True before start egi exp&amp;#10;netstation = False&amp;#10;recording = False" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="netstation = false;&amp;#10;recording = false;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="if netstation:&amp;#10;    import egi.simple as egi&amp;#10;    ns = egi.Netstation()&amp;#10;    print(&quot;import pynetstation&quot;)&amp;#10;    # set ip address&amp;#10;    ns.connect(&quot;10.10.10.42&quot;, 55513)&amp;#10;    ns.BeginSession()&amp;#10;    print(&quot;connected to netstation&quot;)&amp;#10;    if recording:&amp;#10;        ns.StartRecording()&amp;#10;        print(&quot;start recording&quot;)&amp;#10;&amp;#10;def send_to_NS(key_):&amp;#10;    if netstation:&amp;#10;        ns.sync()&amp;#10;        ns.send_event(key=key_)&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="if (netstation) {&amp;#10;    import * as egi from 'egi/simple';&amp;#10;    ns = new egi.Netstation();&amp;#10;    console.log(&quot;import pynetstation&quot;);&amp;#10;    ns.connect(&quot;10.10.10.42&quot;, 55513);&amp;#10;    new ns.BeginSession();&amp;#10;    console.log(&quot;connected to netstation&quot;);&amp;#10;    if (recording) {&amp;#10;        new ns.StartRecording();&amp;#10;        console.log(&quot;start recording&quot;);&amp;#10;    }&amp;#10;}&amp;#10;function send_to_NS(key_) {&amp;#10;    if (netstation) {&amp;#10;        ns.sync();&amp;#10;        ns.send_event({&quot;key&quot;: key});&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
