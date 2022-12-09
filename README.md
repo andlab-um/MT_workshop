@@ -14,6 +14,12 @@ contact: haiyanwu3@gmail.com
 mouse tracking behavioral study
 the decision making task(with mouse tracker by Jon freeman)
 
+Wu, H., Cao, S., Bai, C., Chen, K., & Mobbs, D. (2021). Moral by default? The dynamic tradeoffs between honesty and self-interest. [https://psyarxiv.com/kr4pw/]
+
+Xu, X. J., Liu, X., Hu, X., & Wu, H. (2021). MT-aIAT: Integrating mouse tracking into memory-detection aIAT. [https://psyarxiv.com/ny9xq/]
+
+
+
 ## Part 2: MT with opensesame
 Some code from Haiyan 
 contact: haiyanwu3@gmail.com
@@ -46,5 +52,26 @@ contact: haiyanwu3@gmail.com
   pages={1--10},
   year={2022},
   publisher={Nature Publishing Group}
+}
+
+@article{Wu2021,
+  doi = {10.31234/osf.io/kr4pw},
+  url = {https://doi.org/10.31234/osf.io/kr4pw},
+  year = {2021},
+  month = oct,
+  publisher = {Center for Open Science},
+  author = {Haiyan Wu and Siqi Cao and Changlin Bai and Kun Chen and dean mobbs},
+  title = {Moral by default? The dynamic tradeoffs between honesty and self-interest},
+  abstract = {Humans are often faced with social dilemmas that pit self-interest against honesty, yet questions arise about whether this trade-off reflects spontaneous default response or active suppression of the alternative response. Here, we created two message-sending tasks where decisions involved honesty as truth-telling or dishonesty as untruthful-message-sending. In our pre-registered study, participants joined the message task as the sender, who can send truthful or untruthful messages to earn more money for themselves, thus manipulating the conflict between self-interest and honesty. In experiment 1, we used mouse tracking (MT) to gain insight from movement trajectories and reaction time (RTs) of a forced-choice task with one fair default option. We found that being honest under conflict situations took longer for individuals who had higher self-interest concerns. In experiment 2 with a two-alternative forced-choice design without a default fair option on another sample to test whether self-interest-seeking people would show a similar tendency to lie and how these behavioral patterns correlated with utility and drift-diffusion model (DDM) modeling parameters. We found lower RTs for untruthful responses when self-interest concern was higher. In both experiments, the mixed model of RTs indicated the interest-temptation (i.e., conflict) condition led to a longer RT for truth-telling. These results were also supported by a DDM showing a larger drift rate for untruthful, compared to truthful, responses in conflict trials. Overall, our findings further support the individual difference in moral default, which can be manifested in behavioral indices in decisions.}
+}
+@article{Xu2021,
+  doi = {10.31234/osf.io/ny9xq},
+  url = {https://doi.org/10.31234/osf.io/ny9xq},
+  year = {2021},
+  month = sep,
+  publisher = {Center for Open Science},
+  author = {Xinyi Xu and Xianqing Liu and Xiaoqing Hu and Haiyan Wu},
+  title = {{MT}-{aIAT}: Integrating mouse tracking into memory-detection {aIAT}},
+  abstract = {This study assesses the validity of a newly integrated memory detection method, MT-aIAT, which is a combination of the autobiographical Implicit Association Test (aIAT) and the mouse-tracking method. Participants were assigned to steal a credit card and then performed the aIAT while mouse tracker was recording their motor trajectories. Replicating previous work, we found a RT congruency effect. Critically, the mouse trajectories indicate a congruency effect and a block order effect, suggesting the validity of mouse-tracking technique in unraveling real-time measurement of the IAT congruency effect. Lastly, to test the computational modeling in MT-aIAT, we posited a connectionist model combined with the drift-discussion model to simulate participants’ behavioral performance. Our model captures the ubiquitous implicit bias towards the autobiographical event. Implications of the MT-aIAT in identifying autobiographical memories, the combination of MT-aIAT with computational modeling approach were discussed.}
 }
 ```
