@@ -1,0 +1,3 @@
+共三个block，前两个block包含107个trial，最后一个block包含106个trial
+
+每个block前需要主试按空格键开始实验
