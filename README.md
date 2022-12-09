@@ -1,6 +1,6 @@
 # MT_workshop <img src="https://user-images.githubusercontent.com/19154386/206661950-9cc44bac-c954-4204-9a51-294e5f5ca0a3.png" align="right" width="200px">
 
-[![GitHub repo size](https://img.shields.io/github/repo-size/andlab-um/MT_workshop?color=brightgreen&logo=github)](https://github.com/andlab-um/MT_workshop)
+[![GitHub repo size](https://img.shields.io/badge/andlab-workshop-brightgreen)](https://github.com/andlab-um/MT_workshop)
 [![Paper](https://img.shields.io/badge/Paper-10.1038%2Fs41597--022--01538--5-blue)](https://doi.org/10.1038/s41597-022-01538-5)
 [![Twitter URL](https://img.shields.io/twitter/url?label=%40ANDlab3&style=social&url=https%3A%2F%2Ftwitter.com%2FANDlab3)
 ](https://twitter.com/ANDlab3)
