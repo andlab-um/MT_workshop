@@ -1,4 +1,4 @@
-# MT_workship
+# MT_workshop
 
 [![GitHub repo size](https://img.shields.io/github/repo-size/andlab-um/MT_workshop?color=brightgreen&logo=github)](https://github.com/andlab-um/MT_workshop)
 [![Paper](https://img.shields.io/badge/Paper-10.1038%2Fs41597--022--01538--5-blue)](https://doi.org/10.1038/s41597-022-01538-5)
