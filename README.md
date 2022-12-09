@@ -20,3 +20,6 @@ Some code from Kun for [[OpenNeuro] Mouse-Tracking EGI dataset](https://openneur
 ## Part 4: MT with fMRI
 
 Some code from Xinyi for xxx 
+
+
+## Part 5: MT data processing
