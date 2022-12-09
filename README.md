@@ -12,7 +12,7 @@ Some code from Haiyan for mosue tracker and some R code
 contact: haiyanwu3@gmail.com
 
 mouse tracking behavioral study
-the decision making task(with mouse tracker by Jon freeman)
+the decision making task(with mouse tracker by Jon freeman)[https://www.mousetracker.org/]
 
 Wu, H., Cao, S., Bai, C., Chen, K., & Mobbs, D. (2021). Moral by default? The dynamic tradeoffs between honesty and self-interest. [https://psyarxiv.com/kr4pw/]
 
