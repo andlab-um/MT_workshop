@@ -34,3 +34,17 @@ Some code from Xinyi for xxx
 ## Part 5: MT data processing
 contact: haiyanwu3@gmail.com
 
+## Citations
+
+```
+@article{chen2022resource,
+  title={A resource for assessing dynamic binary choices in the adult brain using EEG and mouse-tracking},
+  author={Chen, Kun and Wang, Ruien and Huang, Jiamin and Gao, Fei and Yuan, Zhen and Qi, Yanyan and Wu, Haiyan},
+  journal={Scientific data},
+  volume={9},
+  number={1},
+  pages={1--10},
+  year={2022},
+  publisher={Nature Publishing Group}
+}
+```
