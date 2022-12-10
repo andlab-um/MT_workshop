@@ -39,8 +39,8 @@ Contact: [Kun CHEN](https://github.com/const7) (yc17307@um.edu.mo)
 
 ## Part 4: MT with fMRI
 contact: xinyi's email and descriptions here
-Some code from Xinyi for xxx 
-
+Some code from Xinyi for Reward and self-consistency: Dissecting  the role of social brain and cognitive control in moral decisions
+DDM and mediation analysis with MT data
 
 ## Part 5: MT data processing
 contact: haiyanwu3@gmail.com
