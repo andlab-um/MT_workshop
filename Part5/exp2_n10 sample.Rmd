@@ -1,0 +1,199 @@
+---
+title: "Exp 2 analysis"
+author: "Haiyan Wu"
+output:
+  pdf_document: 
+    fig_height: 4
+    fig_width: 6
+---
+# Preparations
+## Load libraries
+```{r,message=FALSE}
+library(mousetrap)
+library(ggplot2)
+library(dplyr)
+```
+
+## Custom ggplot2 theme
+```{r}
+theme_set(theme_classic()+ 
+  theme(
+    axis.line = element_line(colour = "black"),
+    axis.ticks = element_line(colour = "black"),
+    axis.text = element_text(colour = "black"),
+    panel.border = element_rect(colour = "black", fill=NA)
+  ))
+#rm(list=ls())
+options(width=90)
+```
+
+# Import new dataset from exp 2
+```{r}
+
+library(readbulk)
+#setwd("~/Desktop/Mousetrackingdata/")
+setwd("~/Documents/Talk/cityU/MTbeha-master/3Exps/")
+mt_data_raw2 <- read_bulk("exp2mt", fun=read_mt, extension=".mt")
+
+mt_data2 <- mt_import_wide(mt_data_raw2)
+mt_2 <- mt_remap_symmetric(mt_data2)
+mt_2 <- mt_align_start_end(mt_2)
+mt_2 <- mt_time_normalize(mt_2)
+mt_data2 <- mt_measures(mt_2)
+```
+# Preprocessing
+## Spatial transformations
+```{r}
+# Remap trajectories
+mt_data2 <- mt_remap_symmetric(mt_data2)
+
+# Align trajectories to common start position
+mt_data2 <- mt_align_start(mt_data2, start=c(0,0))
+```
+
+## Resampling
+```{r}
+# Time-normalize trajectories
+mt_data2 <- mt_time_normalize(mt_data2) 
+```
+
+## Filtering
+```{r}
+# Only keep trials with correct answers
+mt_data2 <- mt_subset(mt_data2, RT<=5000)
+```
+
+# Analysis
+
+## Aggregate trajectories
+```{r}
+# Fig. 4
+mt_plot_aggregate(mt_data2, use="tn_trajectories",
+  x="xpos", y="ypos", 
+  color="condition", subject_id="subjID")+
+  scale_color_manual(values=c("darkorange","steelblue"))
+```
+
+## Calculate measures
+```{r}
+# Calculate velocity and acceleration
+mt_data2 <- mt_derivatives(mt_data2)
+
+# Calculate trial-level indices
+mt_data2 <- mt_measures(mt_data2)
+
+# Calculate sample entropy
+mt_data2 <- mt_sample_entropy(mt_data2, use="tn_trajectories")
+```
+
+
+## Curvature
+
+### Aggregate analyses
+```{r}
+# Aggregate MAD values per participant and condition
+agg_mad <- mt_aggregate_per_subject(mt_data2, 
+  use_variables="MAD", use2_variables="condition",
+  subject_id="subjID")
+
+# Compare aggregated MAD values
+t.test(MAD~condition, data=agg_mad, paired=TRUE)
+
+# Calculate descriptives
+agg_mad %>% 
+  group_by(condition) %>% 
+  summarise_at("MAD",.funs=c("mean","sd")) %>%
+  as.data.frame()
+```
+
+### Trial level analyses
+```{r, message=FALSE}
+# Create data.frame that contains the
+# trial variables and mouse-tracking indices
+results <- merge(mt_data2$data, mt_data2$measures, by="mt_id")
+
+# Load afex package
+#install.packages("afex")
+library(afex)
+
+# Run linear mixed model with Condition as a fixed effect
+# and a random intercept and slope per participant
+mixed(MAD ~ (1+condition|subjID)+condition, data=results)
+# add new model to do analysis
+#mixed(RT ~ (1|subjID) + conflict * error, data=results)
+```
+### Heatmap of individual trajectories
+Fig. 5, top
+```{r}
+mt_heatmap(mt_data2,
+  xres=1000,
+  colors=c("white","black"))
+```
+
+\pagebreak
+
+### Smoothed heatmap
+Fig. 5, middle
+```{r}
+mt_heatmap(mt_data2,
+  xres=1000,
+  colors=c("white","black"),
+  smooth_radius=20,
+  n_shades=10,
+  mean_image=0.2)
+```
+
+\pagebreak
+
+### Difference of heatmaps between conditions
+Fig. 5, bottom
+```{r}
+mt_diffmap(mt_data2,
+  xres=1000,
+  condition=mt_data2$data$error=="1",
+  colors=c("steelblue","white","darkorange"),
+  smooth_radius=20,
+  n_shades=10)
+```
+
+
+\pagebreak
+
+## Temporal analyses
+
+### Average x positions
+```{r,fig.width=8}
+# Plot aggregate time-normalized x-positions (Fig. 6)
+mt_plot_aggregate(mt_data2, use="tn_trajectories",
+  x="steps", y="xpos", color="condition",
+  subject_id="subjID", points=TRUE)+
+  scale_color_manual(values=c("darkorange","steelblue"))
+
+# Aggregate time-normalized trajectories per condition
+# separately per participant
+av_tn_trajectories <- mt_aggregate_per_subject(mt_data2,
+  use="tn_trajectories", use2_variables="condition",
+  subject_id="subjID")
+
+# Paired t-tests on coordinates
+xpos_t_tests <- 
+  with(av_tn_trajectories,
+       sapply(unique(steps),function(i){
+         t.test(xpos[condition=="NC" & steps==i],
+                xpos[condition=="conflict" & steps==i],
+                paired = TRUE)$p.value})
+       )
+
+# Retrieve all significant t-tests
+which(xpos_t_tests<.05)
+```
+
+\pagebreak
+
+### Riverbed plot
+Fig. 7
+```{r}
+mt_plot_riverbed(mt_data2, use="tn_trajectories",
+  y="xpos", facet_col="condition")
+
+```
