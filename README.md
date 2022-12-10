@@ -29,6 +29,11 @@ OpenSesame
 OpenSesame is a program to create experiments for psychology, neuroscience, and experimental economics. The latest stable version is 3.3.14 Lentiform Loewenfeld, released on Dec 7, 2022
 [https://osdoc.cogsci.nl/]
 
+<p align="center">
+	<img src="https://github.com/andlab-um/MT_workshop/blob/e599f5f9cc9f445f20988dfe955a55bcb4d3770f/Part2/food.png" align="middle" height="300px">
+	<br><i>Experimental paradigm</i>
+</p>
+
 ## Part 3: MT with EEG
 
 Some code from Kun for [[OpenNeuro] Mouse-Tracking EGI dataset](https://openneuro.org/datasets/ds003766) preprocessing and preliminary analysis (see [GitHub code here](https://github.com/andlab-um/MT-EEG-dataset)), accompanying with the following paper:
