@@ -31,7 +31,7 @@ OpenSesame is a program to create experiments for psychology, neuroscience, and 
 
 <p align="center">
 	<img src="https://github.com/andlab-um/MT_workshop/blob/e599f5f9cc9f445f20988dfe955a55bcb4d3770f/Part2/food.png" align="middle" height="300px">
-	<br><i>Experimental paradigm</i>
+	<br><i>Demo task</i>
 </p>
 
 ## Part 3: MT with EEG
